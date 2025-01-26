@@ -1,0 +1,81 @@
+Debugger listening on ws://127.0.0.1:56496/b1fc3e39-2e93-447d-9d3f-d165c4d76da2
+For help, see: https://nodejs.org/en/docs/inspector
+Debugger attached.
+
+> backend@1.0.0 start
+> node server.js
+
+Debugger listening on ws://127.0.0.1:56520/03a3b7a8-2db6-45a2-b57a-40ac2658b3b2
+For help, see: https://nodejs.org/en/docs/inspector
+Debugger attached.
+DB_USER: postgres
+DB_PASS: Michigan2388
+DB_NAME: ensolvers_notes
+DB_HOST: localhost
+DB_PORT: 5432
+DB_PASS (typeof): string Michigan2388
+Executing (default): DROP TABLE IF EXISTS "NoteCategories" CASCADE;
+Database connected!
+Waiting for the debugger to disconnect...
+node:events:491
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1463:16)
+    at listenInCluster (node:net:1511:12)
+    at Server.listen (node:net:1599:7)
+    at Function.listen (/Users/carolinasilvariet/Desktop/ENSOLVERS/SilvaRietCorrea-ea7310/backend/node_modules/express/lib/application.js:635:24)
+    at /Users/carolinasilvariet/Desktop/ENSOLVERS/SilvaRietCorrea-ea7310/backend/server.js:39:9
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1490:8)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+Waiting for the debugger to disconnect...
+Debugger listening on ws://127.0.0.1:63427/22d47d26-b1bd-4002-a71d-6406092e18c2
+For help, see: https://nodejs.org/en/docs/inspector
+Debugger attached.
+
+> backend@1.0.0 start
+> node server.js
+
+Debugger listening on ws://127.0.0.1:63443/b53b228c-d44b-4ecb-8402-45ace30cee47
+For help, see: https://nodejs.org/en/docs/inspector
+Debugger attached.
+DB_USER: postgres
+DB_PASS: Michigan2388
+DB_NAME: ensolvers_notes
+DB_HOST: localhost
+DB_PORT: 5432
+DB_PASS (typeof): string Michigan2388
+Executing (default): DROP TABLE IF EXISTS "NoteCategories" CASCADE;
+Executing (default): DROP TABLE IF EXISTS "Notes" CASCADE;
+Database connected!
+Waiting for the debugger to disconnect...
+node:events:491
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1463:16)
+    at listenInCluster (node:net:1511:12)
+    at Server.listen (node:net:1599:7)
+    at Function.listen (/Users/carolinasilvariet/Desktop/ENSOLVERS/SilvaRietCorrea-ea7310/backend/node_modules/express/lib/application.js:635:24)
+    at /Users/carolinasilvariet/Desktop/ENSOLVERS/SilvaRietCorrea-ea7310/backend/server.js:39:9
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1490:8)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+Waiting for the debugger to disconnect...
