@@ -1,13 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const { Note, Category } = require('../models'); // Import models
-const authMiddleware = require('../middleware/authMiddleware');
-
-router.get('/', authMiddleware, async (req, res) => {
-  const notes = await Note.findAll();
-  res.json(notes);
-});
-
 
 // ✅ CREATE A NEW NOTE
 router.post('/', async (req, res) => {

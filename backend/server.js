@@ -1,4 +1,4 @@
-require('dotenv').config({ path: __dirname + '/../.env' });
+require('dotenv').config(); 
 console.log("DB_USER:", process.env.DB_USER);
 console.log("DB_PASS:", process.env.DB_PASS);
 console.log("DB_NAME:", process.env.DB_NAME);
@@ -10,32 +10,18 @@ const express = require("express");
 const cors = require("cors");
 const sequelize = require("./config/database");
 
-// Create an Express instance
 const app = express();
-
-// Middleware setup (CORS y JSON antes de las rutas)
-app.use(cors()); // Enable CORS
-app.use(express.json()); // Enable JSON parsing
-
-// Import routes
-const authRoutes = require('./routes/auth');
-app.use('/api/auth', authRoutes);
-console.log("JWT_SECRET:", process.env.JWT_SECRET);
 
 const notesRoutes = require('./routes/notes');
 const categoryRoutes = require('./routes/category');
 
-// Set up routes
-app.use('/api/auth', authRoutes);
 app.use('/api/notes', notesRoutes);
 app.use('/api/categories', categoryRoutes);
 
-// Base path to check if the server is running
 app.get("/", (req, res) => {
     res.send("API Running!");
 });
 
-// Connect to the database and start the server
 const PORT = process.env.PORT || 5001;
 
 sequelize.sync()
