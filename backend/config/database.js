@@ -1,5 +1,4 @@
 const { Sequelize } = require("sequelize");
-
 require("dotenv").config();
 
 const sequelize = new Sequelize(
@@ -17,7 +16,7 @@ const sequelize = new Sequelize(
         },
       },
     }
-  );
+);
 
 sequelize.authenticate()
   .then(() => console.log("✅ Conexión exitosa a la base de datos"))

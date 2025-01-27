@@ -28,8 +28,9 @@ fs
     );
   })
   .forEach(file => {
-    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
-    db[model.name] = model;
+    const modelImport = require(path.join(__dirname, file));
+    const model = modelImport(sequelize, Sequelize.DataTypes);
+db[model.name] = model;
   });
 
 // Define the relationship between Note and Category here
@@ -40,7 +41,7 @@ Note.belongsToMany(Category, { through: 'NoteCategories' });
 Category.belongsToMany(Note, { through: 'NoteCategories' });
 
 // Synchronize the database
-sequelize.sync({ force: true })  // This will create tables and relationships based on models
+sequelize.sync()
   .then(() => {
     console.log('Database synchronized successfully!');
   })
