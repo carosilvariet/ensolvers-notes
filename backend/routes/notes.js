@@ -6,9 +6,7 @@ const { Note, Category } = require('../models'); // Import models
 router.post('/', async (req, res) => {
     try {
       const { title, content, categoryId } = req.body;
-  
-      // ✅ Verificar si la categoría existe
-      if (categoryId) {
+        if (categoryId) {
         const category = await Category.findByPk(categoryId);
         if (!category) {
           return res.status(400).json({ error: "Invalid category ID" });
